@@ -1,0 +1,24 @@
+PODS:
+  - Alamofire (4.9.0)
+  - HandyJSON (5.0.0)
+  - SwiftyJSON (5.0.0)
+
+DEPENDENCIES:
+  - Alamofire (~> 4.9.0)
+  - HandyJSON
+  - SwiftyJSON
+
+SPEC REPOS:
+  trunk:
+    - Alamofire
+    - HandyJSON
+    - SwiftyJSON
+
+SPEC CHECKSUMS:
+  Alamofire: afc3e7c6db61476cb45cdd23fed06bad03bbc321
+  HandyJSON: 992f2d661716d6a91de82d0056927bc7813b5770
+  SwiftyJSON: 36413e04c44ee145039d332b4f4e2d3e8d6c4db7
+
+PODFILE CHECKSUM: f5c127fb0da32d2aa614dec36fc1df50c055bf60
+
+COCOAPODS: 1.8.3
