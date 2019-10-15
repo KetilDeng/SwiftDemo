@@ -7,28 +7,31 @@
 //
 
 import Foundation
+typealias BannerModelResult = (_ model:[BannerModel]?, _ error:String?) -> Void
 
 class BannerModel: BaseModel {
     var img:String?
     var url:String?
     
-    func getDatas(models: @escaping (_ model:[BannerModel]) -> Void) {
-        
-        KTNetworking.getWithURL(url: "/index/banner/", params: nil, success: { (result) in
-            
-            let value = result as! [String: Any]
-            let datas:[AnyObject] = value["data"] as! [AnyObject]
-            if let bannerModels = [BannerModel].deserialize(from: datas) {
-                bannerModels.forEach({ (bannerModel) in
-                    // ...
-                })
-                models(bannerModels as! [BannerModel])
+    class public func getDatas(result: @escaping BannerModelResult) {
+
+        KTNetworking.getWithURL(url: "index/banner", params: nil, success: { (response) in
+
+            if let value = response {
+                if value["code"] as? Int == 200 {
+                    let datas:[AnyObject] = value["data"] as! [AnyObject]
+                    let bannerModels = [BannerModel].deserialize(from: datas)
+                    result(bannerModels as? [BannerModel], nil)
+                } else {
+                    let msg:String? = value["msg"] as? String
+                    result(nil, msg)
+                }
+            } else {
+                result(nil, "数据为空")
             }
             
         }) { (error) in
-            
+            result(nil, "网络异常")
         }
     }
-    
-   
 }

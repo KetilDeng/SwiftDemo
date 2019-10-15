@@ -14,14 +14,12 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-       
+//        BannerModel.getDatas { (result, error) in
+//        }
+        UserModel.getDatas()
         
-        let params = ["user_name":"19978094343","pwd":"q123456","Client":"ios"]
-        KTNetworking.postWithURL(url: "/login", params: params, success: { (result) in
-            
-        }) { (error) in
-            
-        }
+//        TotalModel.getDatas()
+
     }
 
 

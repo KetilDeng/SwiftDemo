@@ -10,6 +10,7 @@ target 'SwiftDemo' do
 	pod 'Alamofire', '~> 4.9.0'
   pod 'SwiftyJSON'
   pod 'HandyJSON'
-  
+#  pod 'KRProgressHUD'
+
 end
 
