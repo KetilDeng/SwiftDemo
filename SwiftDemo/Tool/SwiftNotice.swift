@@ -80,6 +80,10 @@ class SwiftNotice: NSObject {
     static var timer: DispatchSource!
     static var timerTimes = 0
     
+    static var mainColor = UIColor.black
+    static var textColor = UIColor.white
+    static var textFont = UIFont.systemFont(ofSize: 14)
+
     /* just for iOS 8
      */
     static var degree: Double {
@@ -102,16 +106,18 @@ class SwiftNotice: NSObject {
     
     @discardableResult
     static func noticeOnStatusBar(_ text: String, autoClear: Bool, autoClearTime: Int) -> UIWindow{
-        let frame = UIApplication.shared.statusBarFrame
+        let statusFrame = UIApplication.shared.statusBarFrame
+        let labelH:CGFloat = 44.0
+        let frame = CGRect(x: 0, y: 0, width: statusFrame.width, height: statusFrame.height + labelH)
         let window = UIWindow()
         window.backgroundColor = UIColor.clear
         let view = UIView()
-        view.backgroundColor = UIColor(red: 0x6a/0x100, green: 0xb4/0x100, blue: 0x9f/0x100, alpha: 1)
+        view.backgroundColor = mainColor
         
-        let label = UILabel(frame: frame.height > 20 ? CGRect(x: frame.origin.x, y: frame.origin.y + frame.height - 17, width: frame.width, height: 20) : frame)
+        let label = UILabel(frame: statusFrame.height > 20 ? CGRect(x: frame.origin.x, y: statusFrame.height, width: frame.width, height: labelH) : frame)
         label.textAlignment = NSTextAlignment.center
-        label.font = UIFont.systemFont(ofSize: 12)
-        label.textColor = UIColor.white
+        label.font = textFont
+        label.textColor = textColor
         label.text = text
         view.addSubview(label)
         
@@ -161,7 +167,7 @@ class SwiftNotice: NSObject {
         window.backgroundColor = UIColor.clear
         let mainView = UIView()
         mainView.layer.cornerRadius = 12
-        mainView.backgroundColor = UIColor(red:0, green:0, blue:0, alpha: 0.8)
+        mainView.backgroundColor = mainColor
         
         if imageNames.count > 0 {
             if imageNames.count > timerTimes {
@@ -215,14 +221,14 @@ class SwiftNotice: NSObject {
         window.backgroundColor = UIColor.clear
         let mainView = UIView()
         mainView.layer.cornerRadius = 12
-        mainView.backgroundColor = UIColor(red:0, green:0, blue:0, alpha: 0.8)
+        mainView.backgroundColor = mainColor
         
         let label = UILabel()
         label.text = text
         label.numberOfLines = 0
-        label.font = UIFont.systemFont(ofSize: 13)
+        label.font = textFont
         label.textAlignment = NSTextAlignment.center
-        label.textColor = UIColor.white
+        label.textColor = textColor
         let size = label.sizeThatFits(CGSize(width: UIScreen.main.bounds.width-82, height: CGFloat.greatestFiniteMagnitude))
         label.bounds = CGRect(x: 0, y: 0, width: size.width, height: size.height)
         mainView.addSubview(label)
@@ -260,7 +266,7 @@ class SwiftNotice: NSObject {
         window.backgroundColor = UIColor.clear
         let mainView = UIView()
         mainView.layer.cornerRadius = 10
-        mainView.backgroundColor = UIColor(red:0, green:0, blue:0, alpha: 0.7)
+        mainView.backgroundColor = mainColor
         
         var image = UIImage()
         switch type {
@@ -276,8 +282,8 @@ class SwiftNotice: NSObject {
         mainView.addSubview(checkmarkView)
         
         let label = UILabel(frame: CGRect(x: 0, y: 60, width: 90, height: 16))
-        label.font = UIFont.systemFont(ofSize: 13)
-        label.textColor = UIColor.white
+        label.font = textFont
+        label.textColor = textColor
         label.text = text
         label.textAlignment = NSTextAlignment.center
         mainView.addSubview(label)
@@ -433,7 +439,7 @@ fileprivate extension Selector {
                     v.alpha = 0
                 }, completion: { b in
                     
-                    if let index = windows.index(where: { (item) -> Bool in
+                    if let index = windows.firstIndex(where: { (item) -> Bool in
                         return item == window
                     }) {
                         windows.remove(at: index)

@@ -20,7 +20,47 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="b63-QW-DIl">
+                                <rect key="frame" x="175.5" y="124" width="63" height="30"/>
+                                <state key="normal" title="hudshow"/>
+                                <connections>
+                                    <action selector="hudshow:" destination="BYZ-38-t0r" eventType="touchUpInside" id="c6C-n6-LAd"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hGZ-Oq-58V">
+                                <rect key="frame" x="163" y="191" width="88" height="30"/>
+                                <state key="normal" title="hudshowinfo"/>
+                                <connections>
+                                    <action selector="hudshowinf:" destination="BYZ-38-t0r" eventType="touchUpInside" id="yfM-9K-bkq"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ObU-iI-Rd8">
+                                <rect key="frame" x="151.5" y="254" width="111" height="30"/>
+                                <state key="normal" title="hudshowtopinfo"/>
+                                <connections>
+                                    <action selector="hudshowtopinfo:" destination="BYZ-38-t0r" eventType="touchUpInside" id="hqr-sM-sXa"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IJ0-Il-iue">
+                                <rect key="frame" x="170" y="329" width="74" height="30"/>
+                                <state key="normal" title="hudhidden"/>
+                                <connections>
+                                    <action selector="hudhidden:" destination="BYZ-38-t0r" eventType="touchUpInside" id="7xu-Iv-59z"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="hGZ-Oq-58V" firstAttribute="top" secondItem="b63-QW-DIl" secondAttribute="bottom" constant="37" id="9TP-xk-kff"/>
+                            <constraint firstItem="IJ0-Il-iue" firstAttribute="centerX" secondItem="ObU-iI-Rd8" secondAttribute="centerX" id="LfF-Kr-Rz6"/>
+                            <constraint firstItem="IJ0-Il-iue" firstAttribute="top" secondItem="ObU-iI-Rd8" secondAttribute="bottom" constant="45" id="McG-Pi-Z5p"/>
+                            <constraint firstItem="b63-QW-DIl" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="gYA-9A-zCt"/>
+                            <constraint firstItem="b63-QW-DIl" firstAttribute="top" secondItem="cio-G5-0qJ" secondAttribute="bottom" constant="80" id="hTF-XO-uxz"/>
+                            <constraint firstItem="ObU-iI-Rd8" firstAttribute="top" secondItem="hGZ-Oq-58V" secondAttribute="bottom" constant="33" id="huG-1x-3cG"/>
+                            <constraint firstItem="ObU-iI-Rd8" firstAttribute="centerX" secondItem="hGZ-Oq-58V" secondAttribute="centerX" id="tHs-v4-NM0"/>
+                            <constraint firstItem="hGZ-Oq-58V" firstAttribute="centerX" secondItem="b63-QW-DIl" secondAttribute="centerX" id="xCB-kd-Dq3"/>
+                        </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>

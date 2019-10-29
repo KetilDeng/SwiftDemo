@@ -6,11 +6,12 @@ inhibit_all_warnings!
 use_frameworks!
 
 target 'SwiftDemo' do
-
-	pod 'Alamofire', '~> 4.9.0'
+  pod 'RxSwift'
+  pod 'RxCocoa'
+  pod 'Alamofire'
   pod 'SwiftyJSON'
   pod 'HandyJSON'
-#  pod 'KRProgressHUD'
-
+  pod 'ESPullToRefresh'
+  
 end
 

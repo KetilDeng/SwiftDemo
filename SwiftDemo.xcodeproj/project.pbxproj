@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		041483DA2356BCD20034D103 /* KTColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 041483D92356BCD20034D103 /* KTColor.swift */; };
+		041483DC2356EFEC0034D103 /* KTMacro.swift in Sources */ = {isa = PBXBuildFile; fileRef = 041483DB2356EFEC0034D103 /* KTMacro.swift */; };
 		041CEA96234F028700AB126F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 041CEA95234F028700AB126F /* AppDelegate.swift */; };
 		041CEA98234F028700AB126F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 041CEA97234F028700AB126F /* ViewController.swift */; };
 		041CEA9B234F028700AB126F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 041CEA99234F028700AB126F /* Main.storyboard */; };
@@ -18,6 +20,7 @@
 		041CEACD234F2A5600AB126F /* KTNetworking.swift in Sources */ = {isa = PBXBuildFile; fileRef = 041CEACC234F2A5600AB126F /* KTNetworking.swift */; };
 		041CEACF23507AE700AB126F /* BannerModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 041CEACE23507AE700AB126F /* BannerModel.swift */; };
 		041CEAD123507B0D00AB126F /* BaseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 041CEAD023507B0D00AB126F /* BaseModel.swift */; };
+		04817B202358066E00C13F61 /* KTRefresh.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04817B1F2358066E00C13F61 /* KTRefresh.swift */; };
 		04AF064D2355C7D000783719 /* KTObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 04AF064C2355C7D000783719 /* KTObject.m */; };
 		04AF064F2355C81B00783719 /* SwiftNotice.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04AF064E2355C81B00783719 /* SwiftNotice.swift */; };
 		04FD0BF3235568AA003415E9 /* UserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04FD0BF2235568AA003415E9 /* UserModel.swift */; };
@@ -44,6 +47,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		041483D92356BCD20034D103 /* KTColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KTColor.swift; sourceTree = "<group>"; };
+		041483DB2356EFEC0034D103 /* KTMacro.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KTMacro.swift; sourceTree = "<group>"; };
 		041CEA92234F028700AB126F /* SwiftDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwiftDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		041CEA95234F028700AB126F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		041CEA97234F028700AB126F /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -61,6 +66,7 @@
 		041CEACC234F2A5600AB126F /* KTNetworking.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KTNetworking.swift; sourceTree = "<group>"; };
 		041CEACE23507AE700AB126F /* BannerModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BannerModel.swift; sourceTree = "<group>"; };
 		041CEAD023507B0D00AB126F /* BaseModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseModel.swift; sourceTree = "<group>"; };
+		04817B1F2358066E00C13F61 /* KTRefresh.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KTRefresh.swift; sourceTree = "<group>"; };
 		04AF064A2355C7D000783719 /* SwiftDemo-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "SwiftDemo-Bridging-Header.h"; sourceTree = "<group>"; };
 		04AF064B2355C7D000783719 /* KTObject.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KTObject.h; sourceTree = "<group>"; };
 		04AF064C2355C7D000783719 /* KTObject.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KTObject.m; sourceTree = "<group>"; };
@@ -207,6 +213,9 @@
 				04AF064E2355C81B00783719 /* SwiftNotice.swift */,
 				041CEACC234F2A5600AB126F /* KTNetworking.swift */,
 				04FD0BF62355C552003415E9 /* KTHud.swift */,
+				041483D92356BCD20034D103 /* KTColor.swift */,
+				041483DB2356EFEC0034D103 /* KTMacro.swift */,
+				04817B1F2358066E00C13F61 /* KTRefresh.swift */,
 			);
 			path = Tool;
 			sourceTree = "<group>";
@@ -406,6 +415,8 @@
 			files = (
 				04FD0BF5235570D2003415E9 /* TotalModel.swift in Sources */,
 				041CEAD123507B0D00AB126F /* BaseModel.swift in Sources */,
+				04817B202358066E00C13F61 /* KTRefresh.swift in Sources */,
+				041483DA2356BCD20034D103 /* KTColor.swift in Sources */,
 				04FD0BF3235568AA003415E9 /* UserModel.swift in Sources */,
 				041CEACD234F2A5600AB126F /* KTNetworking.swift in Sources */,
 				041CEA98234F028700AB126F /* ViewController.swift in Sources */,
@@ -415,6 +426,7 @@
 				041CEA96234F028700AB126F /* AppDelegate.swift in Sources */,
 				04FD0BF72355C552003415E9 /* KTHud.swift in Sources */,
 				041CEACF23507AE700AB126F /* BannerModel.swift in Sources */,
+				041483DC2356EFEC0034D103 /* KTMacro.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -592,7 +604,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 558A8JRA32;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = "$(SRCROOT)/SwiftDemo/Support/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -615,7 +627,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 558A8JRA32;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = "$(SRCROOT)/SwiftDemo/Support/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = (
