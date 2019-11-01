@@ -9,23 +9,23 @@
 import UIKit
 extension UIColor {
 
-    class func RGB(red:CGFloat, green:CGFloat, blue:CGFloat) -> UIColor {
+    internal class func RGB(red:CGFloat, green:CGFloat, blue:CGFloat) -> UIColor {
         return self.RGBA(red: red, green: green, blue: blue, aplha: 1)
     }
     
-    class func RGBA(red:CGFloat, green:CGFloat, blue:CGFloat, aplha:CGFloat) -> UIColor {
+    internal class func RGBA(red:CGFloat, green:CGFloat, blue:CGFloat, aplha:CGFloat) -> UIColor {
         return UIColor.init(red: red/255.0, green: green/255.0, blue: blue/255.0, alpha: aplha)
     }
     
-    class func hex(_ hexString: String) -> UIColor{
+    internal class func hex(_ hexString: String) -> UIColor{
         return self.hexColor(hexString, alpha: 1)
     }
     
-    class func hexA(_ hexString: String ,alpha:CGFloat) -> UIColor{
+    internal class func hexA(_ hexString: String ,alpha:CGFloat) -> UIColor{
         return self.hexColor(hexString, alpha: alpha)
     }
     
-    class func hexColor(_ hexString:String ,alpha:CGFloat) -> UIColor{
+    internal class func hexColor(_ hexString:String ,alpha:CGFloat) -> UIColor{
         var cstr = hexString.trimmingCharacters(in:  CharacterSet.whitespacesAndNewlines).uppercased() as NSString;
         if(cstr.length < 6){
             return UIColor.clear;

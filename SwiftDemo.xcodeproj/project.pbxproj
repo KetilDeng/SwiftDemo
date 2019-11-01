@@ -22,7 +22,9 @@
 		041CEAD123507B0D00AB126F /* BaseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 041CEAD023507B0D00AB126F /* BaseModel.swift */; };
 		04817B202358066E00C13F61 /* KTRefresh.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04817B1F2358066E00C13F61 /* KTRefresh.swift */; };
 		04AF064D2355C7D000783719 /* KTObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 04AF064C2355C7D000783719 /* KTObject.m */; };
-		04AF064F2355C81B00783719 /* SwiftNotice.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04AF064E2355C81B00783719 /* SwiftNotice.swift */; };
+		04D9B7AE236BD0830080DA09 /* KTNotice.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04D9B7AD236BD0830080DA09 /* KTNotice.swift */; };
+		04D9B7B3236BD9120080DA09 /* KTFont.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04D9B7B2236BD9120080DA09 /* KTFont.swift */; };
+		04D9B7B5236C0C280080DA09 /* KTNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04D9B7B4236C0C280080DA09 /* KTNavigationController.swift */; };
 		04FD0BF3235568AA003415E9 /* UserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04FD0BF2235568AA003415E9 /* UserModel.swift */; };
 		04FD0BF5235570D2003415E9 /* TotalModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04FD0BF4235570D2003415E9 /* TotalModel.swift */; };
 		04FD0BF72355C552003415E9 /* KTHud.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04FD0BF62355C552003415E9 /* KTHud.swift */; };
@@ -70,7 +72,9 @@
 		04AF064A2355C7D000783719 /* SwiftDemo-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "SwiftDemo-Bridging-Header.h"; sourceTree = "<group>"; };
 		04AF064B2355C7D000783719 /* KTObject.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KTObject.h; sourceTree = "<group>"; };
 		04AF064C2355C7D000783719 /* KTObject.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KTObject.m; sourceTree = "<group>"; };
-		04AF064E2355C81B00783719 /* SwiftNotice.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwiftNotice.swift; sourceTree = "<group>"; };
+		04D9B7AD236BD0830080DA09 /* KTNotice.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KTNotice.swift; sourceTree = "<group>"; };
+		04D9B7B2236BD9120080DA09 /* KTFont.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KTFont.swift; sourceTree = "<group>"; };
+		04D9B7B4236C0C280080DA09 /* KTNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KTNavigationController.swift; sourceTree = "<group>"; };
 		04FD0BF2235568AA003415E9 /* UserModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserModel.swift; sourceTree = "<group>"; };
 		04FD0BF4235570D2003415E9 /* TotalModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TotalModel.swift; sourceTree = "<group>"; };
 		04FD0BF62355C552003415E9 /* KTHud.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KTHud.swift; sourceTree = "<group>"; };
@@ -130,7 +134,7 @@
 		041CEA94234F028700AB126F /* SwiftDemo */ = {
 			isa = PBXGroup;
 			children = (
-				041CEACB234F29EB00AB126F /* Tool */,
+				041CEACB234F29EB00AB126F /* Util */,
 				041CEACA234F03C700AB126F /* Models */,
 				041CEAC9234F03C000AB126F /* Views */,
 				041CEAC8234F03B900AB126F /* Controllers */,
@@ -207,17 +211,19 @@
 			path = Models;
 			sourceTree = "<group>";
 		};
-		041CEACB234F29EB00AB126F /* Tool */ = {
+		041CEACB234F29EB00AB126F /* Util */ = {
 			isa = PBXGroup;
 			children = (
-				04AF064E2355C81B00783719 /* SwiftNotice.swift */,
 				041CEACC234F2A5600AB126F /* KTNetworking.swift */,
 				04FD0BF62355C552003415E9 /* KTHud.swift */,
 				041483D92356BCD20034D103 /* KTColor.swift */,
 				041483DB2356EFEC0034D103 /* KTMacro.swift */,
 				04817B1F2358066E00C13F61 /* KTRefresh.swift */,
+				04D9B7AD236BD0830080DA09 /* KTNotice.swift */,
+				04D9B7B2236BD9120080DA09 /* KTFont.swift */,
+				04D9B7B4236C0C280080DA09 /* KTNavigationController.swift */,
 			);
-			path = Tool;
+			path = Util;
 			sourceTree = "<group>";
 		};
 		22A808B20A073EBC6000D2C9 /* Frameworks */ = {
@@ -417,14 +423,16 @@
 				041CEAD123507B0D00AB126F /* BaseModel.swift in Sources */,
 				04817B202358066E00C13F61 /* KTRefresh.swift in Sources */,
 				041483DA2356BCD20034D103 /* KTColor.swift in Sources */,
+				04D9B7AE236BD0830080DA09 /* KTNotice.swift in Sources */,
 				04FD0BF3235568AA003415E9 /* UserModel.swift in Sources */,
 				041CEACD234F2A5600AB126F /* KTNetworking.swift in Sources */,
 				041CEA98234F028700AB126F /* ViewController.swift in Sources */,
 				04AF064D2355C7D000783719 /* KTObject.m in Sources */,
-				04AF064F2355C81B00783719 /* SwiftNotice.swift in Sources */,
 				041CEA9E234F028700AB126F /* SwiftDemo.xcdatamodeld in Sources */,
+				04D9B7B5236C0C280080DA09 /* KTNavigationController.swift in Sources */,
 				041CEA96234F028700AB126F /* AppDelegate.swift in Sources */,
 				04FD0BF72355C552003415E9 /* KTHud.swift in Sources */,
+				04D9B7B3236BD9120080DA09 /* KTFont.swift in Sources */,
 				041CEACF23507AE700AB126F /* BannerModel.swift in Sources */,
 				041483DC2356EFEC0034D103 /* KTMacro.swift in Sources */,
 			);

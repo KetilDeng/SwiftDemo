@@ -25,28 +25,28 @@
                                 <rect key="frame" x="175.5" y="124" width="63" height="30"/>
                                 <state key="normal" title="hudshow"/>
                                 <connections>
-                                    <action selector="hudshow:" destination="BYZ-38-t0r" eventType="touchUpInside" id="c6C-n6-LAd"/>
+                                    <action selector="hudshow:" destination="BYZ-38-t0r" eventType="touchUpInside" id="bGA-Im-DgX"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hGZ-Oq-58V">
                                 <rect key="frame" x="163" y="191" width="88" height="30"/>
                                 <state key="normal" title="hudshowinfo"/>
                                 <connections>
-                                    <action selector="hudshowinf:" destination="BYZ-38-t0r" eventType="touchUpInside" id="yfM-9K-bkq"/>
+                                    <action selector="hudshowinf:" destination="BYZ-38-t0r" eventType="touchUpInside" id="oWs-Zn-XL7"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ObU-iI-Rd8">
                                 <rect key="frame" x="151.5" y="254" width="111" height="30"/>
                                 <state key="normal" title="hudshowtopinfo"/>
                                 <connections>
-                                    <action selector="hudshowtopinfo:" destination="BYZ-38-t0r" eventType="touchUpInside" id="hqr-sM-sXa"/>
+                                    <action selector="hudshowtopinfo:" destination="BYZ-38-t0r" eventType="touchUpInside" id="aap-sX-zdN"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IJ0-Il-iue">
                                 <rect key="frame" x="170" y="329" width="74" height="30"/>
                                 <state key="normal" title="hudhidden"/>
                                 <connections>
-                                    <action selector="hudhidden:" destination="BYZ-38-t0r" eventType="touchUpInside" id="7xu-Iv-59z"/>
+                                    <action selector="hudhidden:" destination="BYZ-38-t0r" eventType="touchUpInside" id="IFB-SD-bdR"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -62,6 +62,10 @@
                             <constraint firstItem="hGZ-Oq-58V" firstAttribute="centerX" secondItem="b63-QW-DIl" secondAttribute="centerX" id="xCB-kd-Dq3"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="hide" destination="IJ0-Il-iue" id="PCU-VA-2a1"/>
+                        <outlet property="show" destination="b63-QW-DIl" id="m37-Kv-RqV"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>

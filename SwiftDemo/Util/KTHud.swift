@@ -26,9 +26,9 @@ class KTHud: UIResponder {
     }
     
     class func showInfo(_ info: String) {
-        SwiftNotice.mainColor = UIColor.hex("13072D")
-        SwiftNotice.textColor = UIColor.hex("FFE795")
-        SwiftNotice.textFont = UIFont.systemFont(ofSize: 14)
+        KTNotice.mainColor = UIColor.hex("13072D")
+        KTNotice.textColor = UIColor.hex("FFE795")
+        KTNotice.textFont = UIFont.systemFont(ofSize: 14)
         self.default.noticeOnlyText(info)
     }
     

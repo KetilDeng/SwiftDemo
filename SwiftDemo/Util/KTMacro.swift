@@ -11,6 +11,7 @@ import UIKit
 
 let Screen_Height = UIScreen.main.bounds.size.height
 let Screen_Width = UIScreen.main.bounds.size.width
+let KEY_WINDOW = UIApplication.shared.keyWindow
 let SystemVersion = Int(UIDevice.current.systemVersion)
 let Scale_Width:CGFloat = Screen_Width/375.0
 let Scale_Height:CGFloat = Screen_Height/667.0

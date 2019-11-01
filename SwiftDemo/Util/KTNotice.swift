@@ -1,9 +1,9 @@
 //
-//  SwiftNotice.swift
-//  SwiftNotice
+//  KTNotice.swift
+//  SwiftDemo
 //
-//  Created by JohnLui on 15/4/15.
-//  Copyright (c) 2015年 com.lvwenhan. All rights reserved.
+//  Created by Mac on 2019/11/1.
+//  Copyright © 2019 Ketil. All rights reserved.
 //
 
 import Foundation
@@ -15,55 +15,55 @@ extension UIResponder {
     /// wait with your own animated images
     @discardableResult
     func pleaseWaitWithImages(_ imageNames: Array<UIImage>, timeInterval: Int) -> UIWindow{
-        return SwiftNotice.wait(imageNames, timeInterval: timeInterval)
+        return KTNotice.wait(imageNames, timeInterval: timeInterval)
     }
     // api changed from v3.3
     @discardableResult
     func noticeTop(_ text: String, autoClear: Bool = true, autoClearTime: Int = 1) -> UIWindow{
-        return SwiftNotice.noticeOnStatusBar(text, autoClear: autoClear, autoClearTime: autoClearTime)
+        return KTNotice.noticeOnStatusBar(text, autoClear: autoClear, autoClearTime: autoClearTime)
     }
     
     // new apis from v3.3
     @discardableResult
     func noticeSuccess(_ text: String, autoClear: Bool = false, autoClearTime: Int = 3) -> UIWindow{
-        return SwiftNotice.showNoticeWithText(NoticeType.success, text: text, autoClear: autoClear, autoClearTime: autoClearTime)
+        return KTNotice.showNoticeWithText(NoticeType.success, text: text, autoClear: autoClear, autoClearTime: autoClearTime)
     }
     @discardableResult
     func noticeError(_ text: String, autoClear: Bool = false, autoClearTime: Int = 3) -> UIWindow{
-        return SwiftNotice.showNoticeWithText(NoticeType.error, text: text, autoClear: autoClear, autoClearTime: autoClearTime)
+        return KTNotice.showNoticeWithText(NoticeType.error, text: text, autoClear: autoClear, autoClearTime: autoClearTime)
     }
     @discardableResult
     func noticeInfo(_ text: String, autoClear: Bool = false, autoClearTime: Int = 3) -> UIWindow{
-        return SwiftNotice.showNoticeWithText(NoticeType.info, text: text, autoClear: autoClear, autoClearTime: autoClearTime)
+        return KTNotice.showNoticeWithText(NoticeType.info, text: text, autoClear: autoClear, autoClearTime: autoClearTime)
     }
     
     // old apis
     @discardableResult
     func successNotice(_ text: String, autoClear: Bool = true) -> UIWindow{
-        return SwiftNotice.showNoticeWithText(NoticeType.success, text: text, autoClear: autoClear, autoClearTime: 3)
+        return KTNotice.showNoticeWithText(NoticeType.success, text: text, autoClear: autoClear, autoClearTime: 3)
     }
     @discardableResult
     func errorNotice(_ text: String, autoClear: Bool = true) -> UIWindow{
-        return SwiftNotice.showNoticeWithText(NoticeType.error, text: text, autoClear: autoClear, autoClearTime: 3)
+        return KTNotice.showNoticeWithText(NoticeType.error, text: text, autoClear: autoClear, autoClearTime: 3)
     }
     @discardableResult
     func infoNotice(_ text: String, autoClear: Bool = true) -> UIWindow{
-        return SwiftNotice.showNoticeWithText(NoticeType.info, text: text, autoClear: autoClear, autoClearTime: 3)
+        return KTNotice.showNoticeWithText(NoticeType.info, text: text, autoClear: autoClear, autoClearTime: 3)
     }
     @discardableResult
     func notice(_ text: String, type: NoticeType, autoClear: Bool, autoClearTime: Int = 3) -> UIWindow{
-        return SwiftNotice.showNoticeWithText(type, text: text, autoClear: autoClear, autoClearTime: autoClearTime)
+        return KTNotice.showNoticeWithText(type, text: text, autoClear: autoClear, autoClearTime: autoClearTime)
     }
     @discardableResult
     func pleaseWait() -> UIWindow{
-        return SwiftNotice.wait()
+        return KTNotice.wait()
     }
     @discardableResult
     func noticeOnlyText(_ text: String) -> UIWindow{
-        return SwiftNotice.showText(text)
+        return KTNotice.showText(text)
     }
     func clearAllNotice() {
-        SwiftNotice.clear()
+        KTNotice.clear()
     }
 }
 
@@ -73,7 +73,7 @@ enum NoticeType{
     case info
 }
 
-class SwiftNotice: NSObject {
+class KTNotice: NSObject {
     
     static var windows = Array<UIWindow?>()
     static let rv = UIApplication.shared.keyWindow?.subviews.first as UIView?
@@ -83,7 +83,7 @@ class SwiftNotice: NSObject {
     static var mainColor = UIColor.black
     static var textColor = UIColor.white
     static var textFont = UIFont.systemFont(ofSize: 14)
-
+    
     /* just for iOS 8
      */
     static var degree: Double {
@@ -271,11 +271,11 @@ class SwiftNotice: NSObject {
         var image = UIImage()
         switch type {
         case .success:
-            image = SwiftNoticeSDK.imageOfCheckmark
+            image = KTNoticeSDK.imageOfCheckmark
         case .error:
-            image = SwiftNoticeSDK.imageOfCross
+            image = KTNoticeSDK.imageOfCross
         case .info:
-            image = SwiftNoticeSDK.imageOfInfo
+            image = KTNoticeSDK.imageOfInfo
         }
         let checkmarkView = UIImageView(image: image)
         checkmarkView.frame = CGRect(x: 27, y: 15, width: 36, height: 36)
@@ -327,7 +327,7 @@ class SwiftNotice: NSObject {
     }
 }
 
-class SwiftNoticeSDK {
+class KTNoticeSDK {
     struct Cache {
         static var imageOfCheckmark: UIImage?
         static var imageOfCross: UIImage?
@@ -382,7 +382,7 @@ class SwiftNoticeSDK {
         }
         UIGraphicsBeginImageContextWithOptions(CGSize(width: 36, height: 36), false, 0)
         
-        SwiftNoticeSDK.draw(NoticeType.success)
+        KTNoticeSDK.draw(NoticeType.success)
         
         Cache.imageOfCheckmark = UIGraphicsGetImageFromCurrentImageContext()
         UIGraphicsEndImageContext()
@@ -394,7 +394,7 @@ class SwiftNoticeSDK {
         }
         UIGraphicsBeginImageContextWithOptions(CGSize(width: 36, height: 36), false, 0)
         
-        SwiftNoticeSDK.draw(NoticeType.error)
+        KTNoticeSDK.draw(NoticeType.error)
         
         Cache.imageOfCross = UIGraphicsGetImageFromCurrentImageContext()
         UIGraphicsEndImageContext()
@@ -406,7 +406,7 @@ class SwiftNoticeSDK {
         }
         UIGraphicsBeginImageContextWithOptions(CGSize(width: 36, height: 36), false, 0)
         
-        SwiftNoticeSDK.draw(NoticeType.info)
+        KTNoticeSDK.draw(NoticeType.info)
         
         Cache.imageOfInfo = UIGraphicsGetImageFromCurrentImageContext()
         UIGraphicsEndImageContext()
@@ -416,15 +416,15 @@ class SwiftNoticeSDK {
 
 extension UIWindow{
     func hide(){
-        SwiftNotice.hideNotice(self)
+        KTNotice.hideNotice(self)
     }
 }
 
 fileprivate extension Selector {
-    static let hideNotice = #selector(SwiftNotice.hideNotice(_:))
+    static let hideNotice = #selector(KTNotice.hideNotice(_:))
 }
 
-@objc extension SwiftNotice {
+@objc extension KTNotice {
     
     // fix https://github.com/johnlui/SwiftNotice/issues/2
     static func hideNotice(_ sender: AnyObject) {

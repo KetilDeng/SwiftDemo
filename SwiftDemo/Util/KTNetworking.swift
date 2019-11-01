@@ -12,14 +12,9 @@ import SwiftyJSON
 
 #if PRODUCTION
 let baseURL = "https://hi.api.mitop.cc"
-let socketURL = "wss://hi.api.mitop.cc:8001"
 #else
 let baseURL = "http://new.mitop.api.qidianjinfu.com/"
-let socketURL = "ws://new.mitop.api.qidianjinfu.com:8001"
 #endif
-
-//let baseURL = "https://hi.api.mitop.cc"
-//let socketURL = "wss://hi.api.mitop.cc:8001"
 
 typealias KTResponseSuccess = (_ response:[AnyHashable: Any]?) -> Void
 typealias KTResponseFail = (_ error: Error?) -> Void
